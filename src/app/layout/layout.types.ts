@@ -10,6 +10,7 @@ export type Layout =
     | 'classiclight'
     | 'classy'
     | 'compact'
+    | 'compactwhite'
     | 'compactlight'
     | 'dense'
     | 'futuristic'

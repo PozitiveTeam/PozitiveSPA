@@ -1,0 +1,199 @@
+<div class="flex flex-col flex-auto min-w-0 bg-default">
+   <!-- Header -->
+   <div class="relative bg-card flex flex-col sm:flex-row flex-0 sm:items-center sm:justify-between py-4 px-6 md:px-8">
+
+    <!-- Title -->
+    <div class="flex-1 min-w-0">
+      <div>
+        <nav  aria-label="Back">
+          <a href="#" class="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700">
+            <!-- Heroicon name: solid/chevron-left -->
+            <svg class="flex-shrink-0 -ml-1 mr-1 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+            Back
+          </a>
+        </nav>
+       
+      </div>
+      <!-- Title -->
+      <div class="text-4xl font-extrabold tracking-tight">Inventory</div>
+      <nav class="hidden sm:flex" aria-label="Breadcrumb">
+        <ol class="flex items-center space-x-4">
+          <li>
+            <div>
+              <a href="#" class="text-sm font-medium text-gray-500 hover:text-gray-700">Jobs</a>
+            </div>
+          </li>
+          <li>
+            <div class="flex items-center">
+              <!-- Heroicon name: solid/chevron-right -->
+              <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+              </svg>
+              <a href="#" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Engineering</a>
+            </div>
+          </li>
+          <li>
+            <div class="flex items-center">
+              <!-- Heroicon name: solid/chevron-right -->
+              <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+              </svg>
+              <a href="#" aria-current="page" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Back End Developer</a>
+            </div>
+          </li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- Actions -->
+    <div class="flex shrink-0 items-center mt-6 sm:mt-0 sm:ml-4">
+      <!-- Search -->
+      <mat-form-field class="fuse-mat-dense fuse-mat-rounded min-w-64" [subscriptSizing]="'dynamic'">
+        <mat-icon class="icon-size-5" matPrefix [svgIcon]="'heroicons_solid:search'"></mat-icon>
+        <input matInput [autocomplete]="'off'" [placeholder]="'Search products'">
+      </mat-form-field>
+      <!-- Add product button -->
+      <button class="ml-4" mat-flat-button [color]="'primary'">
+        <mat-icon [svgIcon]="'heroicons_outline:plus'"></mat-icon>
+        <span class="ml-2 mr-1">Add</span>
+      </button>
+    </div>
+  </div>
+
+
+
+  <!-- Main -->
+  <div class="flex-auto -mt-px md:px-8 pb-2">
+    <div class="w-full max-w-screen-xl mx-auto">
+
+      <!-- Contact form -->
+      <div class="relative flex flex-col flex-auto items-center px-6 sm:px-12">
+        <div class="w-full max-w-3xl mt-8 p-8 pb-4 bg-card shadow overflow-hidden">
+          <!-- Form -->
+          <form [formGroup]="accountForm">
+
+            <div class="grid sm:grid-cols-4 gap-6 w-full mt-8">
+              <!-- Name -->
+              <div class="sm:col-span-4">
+                <mat-form-field class="w-full" [subscriptSizing]="'dynamic'">
+                  <mat-label>Name</mat-label>
+                  <mat-icon class="icon-size-5" [svgIcon]="'heroicons_solid:user'" matPrefix></mat-icon>
+                  <input [formControlName]="'name'" matInput>
+                </mat-form-field>
+              </div>
+              <!-- Username -->
+              <div class="sm:col-span-4">
+                <mat-form-field class="fuse-mat-emphasized-affix w-full" [subscriptSizing]="'dynamic'">
+                  <mat-label>Username</mat-label>
+                  <div class="text-secondary" matPrefix>
+                    fusetheme.com/
+                  </div>
+                  <input [formControlName]="'username'" matInput>
+                </mat-form-field>
+              </div>
+              <!-- Title -->
+              <div class="sm:col-span-2">
+                <mat-form-field class="w-full" [subscriptSizing]="'dynamic'">
+                  <mat-label>Title</mat-label>
+                  <mat-icon class="icon-size-5" [svgIcon]="'heroicons_solid:briefcase'" matPrefix></mat-icon>
+                  <input [formControlName]="'title'" matInput>
+                </mat-form-field>
+              </div>
+              <!-- Company -->
+              <div class="sm:col-span-2">
+                <mat-form-field class="w-full" [subscriptSizing]="'dynamic'">
+                  <mat-label>Company</mat-label>
+                  <mat-icon class="icon-size-5" [svgIcon]="'heroicons_solid:office-building'" matPrefix></mat-icon>
+                  <input [formControlName]="'company'" matInput>
+                </mat-form-field>
+              </div>
+              <!-- About -->
+              <div class="sm:col-span-4">
+                <mat-form-field class="w-full" [subscriptSizing]="'dynamic'">
+                  <mat-label>About</mat-label>
+                  <textarea matInput [formControlName]="'about'" cdkTextareaAutosize
+                    [cdkAutosizeMinRows]="5"></textarea>
+                </mat-form-field>
+                <div class="mt-1 text-md text-hint">Brief description for your profile. Basic HTML and Emoji are
+                  allowed.</div>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="my-10 border-t"></div>
+
+            <!-- Section -->
+            <div class="w-full">
+              <div class="text-xl">Personal Information</div>
+              <div class="text-secondary">Communication details in case we want to connect with you. These will be
+                kept private.</div>
+            </div>
+            <div class="grid sm:grid-cols-4 gap-6 w-full mt-8">
+              <!-- Email -->
+              <div class="sm:col-span-2">
+                <mat-form-field class="w-full" [subscriptSizing]="'dynamic'">
+                  <mat-label>Email</mat-label>
+                  <mat-icon class="icon-size-5" [svgIcon]="'heroicons_solid:mail'" matPrefix></mat-icon>
+                  <input [formControlName]="'email'" matInput>
+                </mat-form-field>
+              </div>
+              <!-- Phone -->
+              <div class="sm:col-span-2">
+                <mat-form-field class="w-full" [subscriptSizing]="'dynamic'">
+                  <mat-label>Phone</mat-label>
+                  <mat-icon class="icon-size-5" [svgIcon]="'heroicons_solid:phone'" matPrefix></mat-icon>
+                  <input [formControlName]="'phone'" matInput>
+                </mat-form-field>
+              </div>
+              <!-- Country -->
+              <div class="sm:col-span-2">
+                <mat-form-field class="w-full" [subscriptSizing]="'dynamic'">
+                  <mat-label>Country</mat-label>
+                  <mat-icon class="icon-size-5" [svgIcon]="'heroicons_solid:location-marker'" matPrefix></mat-icon>
+                  <mat-select [formControlName]="'country'">
+                    <mat-option [value]="'usa'">United States</mat-option>
+                    <mat-option [value]="'canada'">Canada</mat-option>
+                    <mat-option [value]="'mexico'">Mexico</mat-option>
+                    <mat-option [value]="'france'">France</mat-option>
+                    <mat-option [value]="'germany'">Germany</mat-option>
+                    <mat-option [value]="'italy'">Italy</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <!-- Language -->
+              <div class="sm:col-span-2">
+                <mat-form-field class="w-full" [subscriptSizing]="'dynamic'">
+                  <mat-label>Language</mat-label>
+                  <mat-icon class="icon-size-5" [svgIcon]="'heroicons_solid:globe-alt'" matPrefix></mat-icon>
+                  <mat-select [formControlName]="'language'">
+                    <mat-option [value]="'english'">English</mat-option>
+                    <mat-option [value]="'french'">French</mat-option>
+                    <mat-option [value]="'spanish'">Spanish</mat-option>
+                    <mat-option [value]="'german'">German</mat-option>
+                    <mat-option [value]="'italian'">Italian</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="mt-11 mb-10 border-t"></div>
+
+            <!-- Actions -->
+            <div class="flex items-center justify-end">
+              <button mat-stroked-button type="button">
+                Cancel
+              </button>
+              <button class="ml-4" mat-flat-button type="button" [color]="'primary'">Save
+              </button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>'
